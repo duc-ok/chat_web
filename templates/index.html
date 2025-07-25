@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>trợ lí ảo của đức</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input, button { padding: 10px; margin: 5px; }
+        #chatbox { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; background: #f9f9f9; }
+        .user { color: blue; }
+        .bot { color: green; }
+    </style>
+</head>
+<body>
+    <h2>🤖 Chatbot Python</h2>
+    <div id="chatbox"></div>
+    <input id="user_input" type="text" placeholder="Nhập câu hỏi..." />
+    <button onclick="send()">Gửi</button>
+
+    <hr>
+
+    <h3>🧠 Dạy Chatbot Kiến Thức Mới</h3>
+    <input id="tu_khoa" placeholder="Từ khóa chính" />
+    <input id="pattern" placeholder="Ví dụ câu hỏi" />
+    <input id="response" placeholder="Câu trả lời" />
+    <button onclick="teach()">Dạy</button>
+
+    <script>
+        function appendToChat(role, text) {
+            const box = document.getElementById("chatbox");
+            const msg = document.createElement("div");
+            msg.className = role;
+            msg.textContent = (role === "user" ? "Bạn: " : "Bot: ") + text;
+            box.appendChild(msg);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function send() {
+            const input = document.getElementById("user_input");
+            const text = input.value;
+            if (!text) return;
+            appendToChat("user", text);
+            fetch("/hoi", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ cau_hoi: text })
+            })
+            .then(res => res.json())
+            .then(data => appendToChat("bot", data.tra_loi));
+            input.value = "";
+        }
+
+        function teach() {
+            const tu_khoa = document.getElementById("tu_khoa").value;
+            const pattern = document.getElementById("pattern").value;
+            const response = document.getElementById("response").value;
+
+            if (!tu_khoa || !pattern || !response) {
+                alert("⚠️ Vui lòng điền đầy đủ thông tin.");
+                return;
+            }
+
+            fetch("/them", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ tu_khoa, pattern, response })
+            })
+            .then(res => res.json())
+            .then(data => alert(data.message));
+        }
+    </script>
+</body>
+</html>

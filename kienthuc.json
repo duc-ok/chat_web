@@ -1,0 +1,46 @@
+{
+  "chào": {
+    "patterns": ["chào", "xin chào", "hi", "hello"],
+    "responses": ["Chào bạn!", "Xin chào!", "Rất vui được gặp bạn."]
+  },
+  "tạm biệt": {
+    "patterns": ["tạm biệt", "bye", "hẹn gặp lại"],
+    "responses": ["Tạm biệt nhé!", "Hẹn gặp lại!", "Chúc bạn một ngày tốt lành."]
+  },
+  "tên": {
+    "patterns": ["bạn tên gì", "tên bạn", "tên của bạn"],
+    "responses": ["Tôi là Chatbot học Python.", "Bạn có thể gọi tôi là Bot."]
+  },
+  "khỏe": {
+    "patterns": ["bạn khỏe không", "bạn ổn chứ", "khỏe không"],
+    "responses": ["Tôi khỏe, cảm ơn bạn!", "Tôi luôn sẵn sàng để trò chuyện."]
+  },
+  "python": {
+    "patterns": ["python", "ngôn ngữ python", "bạn biết python không"],
+    "responses": ["Python là một ngôn ngữ lập trình phổ biến.", "Python rất dễ học và mạnh mẽ.", "Python dùng cho web, AI, dữ liệu..."]
+  },
+  "ai": {
+    "patterns": ["ai", "trí tuệ nhân tạo", "ai là gì"],
+    "responses": ["AI là trí tuệ nhân tạo.", "AI giúp máy móc suy nghĩ như con người.", "AI rất quan trọng trong công nghệ hiện đại."]
+  },
+  "lập trình": {
+    "patterns": ["lập trình", "viết code", "code"],
+    "responses": ["Lập trình là viết ra các lệnh để điều khiển máy tính.", "Lập trình có thể tạo ra phần mềm, game, và website."]
+  },
+  "html": {
+    "patterns": ["html", "ngôn ngữ html", "cấu trúc trang web"],
+    "responses": ["HTML là ngôn ngữ đánh dấu để xây dựng trang web.", "HTML gồm các thẻ như <p>, <a>, <div>..."]
+  },
+  "css": {
+    "patterns": ["css", "trang trí web", "làm đẹp web"],
+    "responses": ["CSS dùng để làm đẹp trang web.", "CSS giúp thay đổi màu, bố cục, và phông chữ trên trang web."]
+  },
+  "javascript": {
+    "patterns": ["js", "javascript", "web tương tác"],
+    "responses": ["JavaScript là ngôn ngữ lập trình chạy trên trình duyệt.", "JS giúp trang web tương tác như nút bấm, chuyển trang..."]
+  },
+  "cà phê giúp chúng ta tỉnh táo": {
+    "patterns": ["cà phê giúp chúng ta tỉnh táo"],
+    "responses": ["đúng vậy"]
+  }
+}
