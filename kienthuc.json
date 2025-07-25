@@ -1,180 +1,83 @@
 {
-  "nghệ thuật": {
-    "patterns": ["nghệ thuật là gì", "vẽ tranh", "hội họa", "mỹ thuật"],
-    "responses": ["Nghệ thuật là cách thể hiện cảm xúc và ý tưởng thông qua hình ảnh, âm thanh, hoặc hành động."]
+  "máy học": {
+    "patterns": ["máy học", "machine learning", "tự học của máy"],
+    "responses": ["Máy học là lĩnh vực giúp máy tính học từ dữ liệu mà không cần lập trình rõ ràng."]
   },
-  "điện ảnh": {
-    "patterns": ["phim ảnh", "điện ảnh là gì", "làm phim"],
-    "responses": ["Điện ảnh là nghệ thuật kể chuyện bằng hình ảnh chuyển động và âm thanh."]
+  "deep learning": {
+    "patterns": ["deep learning", "học sâu", "học sâu là gì"],
+    "responses": ["Deep learning là một nhánh của machine learning sử dụng mạng neuron nhân tạo."]
   },
-  "đọc sách": {
-    "patterns": ["lợi ích đọc sách", "đọc sách", "tại sao nên đọc sách"],
-    "responses": ["Đọc sách giúp tăng kiến thức, mở rộng vốn từ và cải thiện tư duy."]
+  "mạng neuron": {
+    "patterns": ["mạng neuron", "neural network", "mạng thần kinh nhân tạo"],
+    "responses": ["Mạng neuron mô phỏng cách hoạt động của não người để xử lý dữ liệu."]
   },
-  "tâm lý học": {
-    "patterns": ["tâm lý học là gì", "tâm lý", "ngành tâm lý"],
-    "responses": ["Tâm lý học nghiên cứu hành vi và quá trình tâm thần của con người."]
+  "tensorflow": {
+    "patterns": ["tensorflow", "tensorflow là gì", "thư viện tensorflow"],
+    "responses": ["TensorFlow là một thư viện mã nguồn mở cho máy học và deep learning."]
   },
-  "sinh học": {
-    "patterns": ["sinh học là gì", "sinh vật", "sinh lý người"],
-    "responses": ["Sinh học là khoa học nghiên cứu về sự sống và các sinh vật."]
-  },
-  "vật lý": {
-    "patterns": ["vật lý là gì", "vật lý học", "định luật vật lý"],
-    "responses": ["Vật lý là ngành khoa học tự nhiên nghiên cứu vật chất, năng lượng và các quy luật."]
-  },
-  "hóa học": {
-    "patterns": ["hóa học là gì", "phản ứng hóa học", "nguyên tố hóa học"],
-    "responses": ["Hóa học là môn học nghiên cứu về các chất và phản ứng hóa học."]
-  },
-  "thiên văn học": {
-    "patterns": ["thiên văn học là gì", "vũ trụ", "nghiên cứu sao"],
-    "responses": ["Thiên văn học nghiên cứu các thiên thể như sao, hành tinh và vũ trụ."]
-  },
-  "khí hậu": {
-    "patterns": ["khí hậu", "biến đổi khí hậu", "môi trường khí hậu"],
-    "responses": ["Khí hậu là điều kiện thời tiết trung bình trong thời gian dài ở một khu vực."]
+  "pytorch": {
+    "patterns": ["pytorch", "pytorch là gì", "thư viện pytorch"],
+    "responses": ["PyTorch là một framework học sâu mạnh mẽ, dễ dùng và linh hoạt."]
   },
   "môi trường": {
-    "patterns": ["bảo vệ môi trường", "môi trường là gì", "ô nhiễm môi trường"],
-    "responses": ["Môi trường là nơi sinh sống của con người và sinh vật, cần được bảo vệ."]
+    "patterns": ["môi trường", "bảo vệ môi trường", "ô nhiễm môi trường"],
+    "responses": ["Bảo vệ môi trường là trách nhiệm của tất cả mọi người."]
   },
-  "năng lượng tái tạo": {
-    "patterns": ["năng lượng mặt trời", "năng lượng gió", "tái tạo năng lượng"],
-    "responses": ["Năng lượng tái tạo là nguồn năng lượng không cạn kiệt và thân thiện với môi trường."]
+  "nhiệt độ": {
+    "patterns": ["nhiệt độ", "nhiệt độ hiện tại", "bao nhiêu độ"],
+    "responses": ["Tôi không biết nhiệt độ chính xác. Bạn có thể tra cứu trên Google hoặc thời tiết."]
   },
-  "công nghệ xanh": {
-    "patterns": ["công nghệ xanh", "bảo vệ môi trường bằng công nghệ", "ứng dụng công nghệ xanh"],
-    "responses": ["Công nghệ xanh giúp giảm ô nhiễm và sử dụng tài nguyên hiệu quả."]
+  "internet": {
+    "patterns": ["internet", "mạng internet", "kết nối internet"],
+    "responses": ["Internet là mạng kết nối toàn cầu cho phép chia sẻ thông tin."]
   },
-  "thực phẩm sạch": {
-    "patterns": ["ăn sạch", "thực phẩm hữu cơ", "thực phẩm sạch là gì"],
-    "responses": ["Thực phẩm sạch không chứa hóa chất độc hại và đảm bảo an toàn cho sức khỏe."]
+  "wifi": {
+    "patterns": ["wifi", "wifi là gì", "kết nối wifi"],
+    "responses": ["Wi-Fi là công nghệ mạng không dây giúp kết nối Internet."]
   },
-  "sống xanh": {
-    "patterns": ["sống xanh là gì", "lối sống thân thiện môi trường", "bảo vệ trái đất"],
-    "responses": ["Sống xanh là cách sống giảm tác động đến môi trường bằng hành vi có trách nhiệm."]
+  "điện toán đám mây": {
+    "patterns": ["điện toán đám mây", "cloud computing", "máy chủ đám mây"],
+    "responses": ["Điện toán đám mây giúp lưu trữ và xử lý dữ liệu trên mạng thay vì máy cá nhân."]
   },
-  "kỹ năng sống": {
-    "patterns": ["kỹ năng sống", "rèn luyện kỹ năng", "các kỹ năng quan trọng"],
-    "responses": ["Kỹ năng sống giúp con người ứng phó với các tình huống hàng ngày hiệu quả."]
+  "github": {
+    "patterns": ["github", "github là gì", "repo github"],
+    "responses": ["GitHub là nền tảng lưu trữ mã nguồn và cộng tác lập trình."]
   },
-  "quản lý thời gian": {
-    "patterns": ["quản lý thời gian", "sắp xếp công việc", "làm việc hiệu quả"],
-    "responses": ["Quản lý thời gian giúp hoàn thành công việc đúng hạn và giảm căng thẳng."]
+  "giao tiếp": {
+    "patterns": ["giao tiếp", "cách giao tiếp", "kỹ năng giao tiếp"],
+    "responses": ["Giao tiếp tốt là chìa khóa thành công trong cuộc sống và công việc."]
   },
-  "giao tiếp hiệu quả": {
-    "patterns": ["giao tiếp tốt", "kỹ năng giao tiếp", "cách nói chuyện hay"],
-    "responses": ["Giao tiếp hiệu quả giúp truyền đạt ý tưởng rõ ràng và xây dựng mối quan hệ tốt."]
+  "thuyết trình": {
+    "patterns": ["thuyết trình", "kỹ năng thuyết trình", "cách thuyết trình"],
+    "responses": ["Thuyết trình là kỹ năng quan trọng để truyền đạt ý tưởng rõ ràng."]
   },
-  "giải quyết vấn đề": {
-    "patterns": ["kỹ năng giải quyết vấn đề", "tư duy logic", "xử lý tình huống"],
-    "responses": ["Giải quyết vấn đề là khả năng phân tích và đưa ra giải pháp hợp lý."]
+  "chatbot": {
+    "patterns": ["chatbot", "bot trò chuyện", "trí tuệ nhân tạo chatbot"],
+    "responses": ["Chatbot là chương trình máy tính có thể trò chuyện tự động với con người."]
   },
-  "học nhóm": {
-    "patterns": ["làm việc nhóm", "học nhóm hiệu quả", "kỹ năng làm nhóm"],
-    "responses": ["Học nhóm giúp trao đổi kiến thức và phát triển tinh thần hợp tác."]
+  "sinh học": {
+    "patterns": ["sinh học", "học sinh học", "sinh học là gì"],
+    "responses": ["Sinh học là môn khoa học nghiên cứu về sự sống và các sinh vật."]
   },
-  "sáng tạo": {
-    "patterns": ["tư duy sáng tạo", "cách nghĩ khác biệt", "sáng tạo là gì"],
-    "responses": ["Sáng tạo là khả năng đưa ra ý tưởng mới và độc đáo."]
+  "vật lý": {
+    "patterns": ["vật lý", "môn vật lý", "lý thuyết vật lý"],
+    "responses": ["Vật lý nghiên cứu về vật chất, năng lượng và các quy luật tự nhiên."]
   },
-  "cuộc cách mạng công nghiệp lần 4": {
-    "patterns": ["cách mạng công nghiệp 4.0", "cuộc cách mạng công nghiệp lần 4"],
-    "responses": ["Cách mạng công nghiệp 4.0 là xu hướng hiện đại hóa bằng công nghệ số, AI, IoT, và dữ liệu lớn."]
+  "hóa học": {
+    "patterns": ["hóa học", "phản ứng hóa học", "hóa trị"],
+    "responses": ["Hóa học là ngành khoa học nghiên cứu về cấu tạo và phản ứng của chất."]
   },
-  "tốc độ ánh sáng": {
-    "patterns": ["tốc độ ánh sáng", "ánh sáng đi bao nhiêu", "tốc độ của ánh sáng"],
-    "responses": ["Tốc độ ánh sáng là khoảng 299.792.458 m/s trong chân không."]
+  "toán học": {
+    "patterns": ["toán học", "giải toán", "học toán"],
+    "responses": ["Toán học giúp phát triển tư duy logic và là nền tảng cho nhiều ngành khác."]
   },
-  "sự sống ngoài trái đất": {
-    "patterns": ["người ngoài hành tinh", "sự sống ngoài trái đất", "ngoài trái đất có sống không"],
-    "responses": ["Hiện chưa có bằng chứng xác thực, nhưng có khả năng tồn tại sự sống ngoài Trái đất."]
+  "lịch sử": {
+    "patterns": ["lịch sử", "lịch sử Việt Nam", "sự kiện lịch sử"],
+    "responses": ["Lịch sử giúp ta hiểu về quá khứ để xây dựng tương lai."]
   },
-  "tác dụng của yoga": {
-    "patterns": ["lợi ích yoga", "tác dụng của yoga", "yoga tốt không"],
-    "responses": ["Yoga giúp giảm stress, cải thiện sức khỏe tinh thần và tăng cường sự dẻo dai."]
-  },
-  "tự học hiệu quả": {
-    "patterns": ["cách tự học", "tự học thế nào", "làm sao tự học hiệu quả"],
-    "responses": ["Hãy lập kế hoạch rõ ràng, đặt mục tiêu nhỏ, nghỉ ngơi hợp lý và luyện tập thường xuyên."]
-  },
-  "định lý pytago": {
-    "patterns": ["định lý pytago", "pytago là gì", "tam giác vuông pytago"],
-    "responses": ["Định lý Pytago: Trong tam giác vuông, bình phương cạnh huyền bằng tổng bình phương hai cạnh góc vuông."]
-  },
-  "sự phát triển của AI": {
-    "patterns": ["AI phát triển thế nào", "tương lai của AI", "ai sau này ra sao"],
-    "responses": ["AI sẽ ngày càng thông minh hơn và được ứng dụng trong mọi lĩnh vực từ y tế, giáo dục đến sản xuất."]
-  },
-  "hành tinh lớn nhất": {
-    "patterns": ["hành tinh lớn nhất", "hành tinh nào to nhất", "sao nào lớn nhất"],
-    "responses": ["Sao Mộc (Jupiter) là hành tinh lớn nhất trong Hệ Mặt Trời."]
-  },
-  "sinh vật cổ đại": {
-    "patterns": ["khủng long", "sinh vật cổ đại", "động vật thời tiền sử"],
-    "responses": ["Có nhiều sinh vật cổ đại như khủng long, cá cổ đại, bò sát khổng lồ... sống cách đây hàng triệu năm."]
-  },
-  "lợi ích đọc sách": {
-    "patterns": ["đọc sách có ích gì", "lợi ích của việc đọc sách", "tại sao nên đọc sách"],
-    "responses": ["Đọc sách giúp mở rộng kiến thức, cải thiện khả năng tư duy và giảm căng thẳng."]
-  },
-
-  "cấu tạo trái đất": {
-    "patterns": ["trái đất có gì", "cấu tạo trái đất", "trái đất gồm những lớp gì"],
-    "responses": ["Trái đất gồm 3 lớp chính: vỏ trái đất, lớp phủ và lõi."]
-  },
-  "các kiểu thời tiết": {
-    "patterns": ["thời tiết có những loại nào", "các kiểu thời tiết", "trời mưa, nắng là gì"],
-    "responses": ["Thời tiết có thể là nắng, mưa, gió, tuyết, sương mù... tùy vùng và mùa."]
-  },
-  "cấu tạo tế bào": {
-    "patterns": ["tế bào gồm gì", "cấu tạo tế bào", "các bộ phận của tế bào"],
-    "responses": ["Tế bào gồm màng tế bào, nhân tế bào, chất tế bào và các bào quan."]
-  },
-  "phép cộng": {
-    "patterns": ["phép cộng là gì", "cộng số", "phép cộng"],
-    "responses": ["Phép cộng là phép toán cơ bản để tính tổng hai hay nhiều số."]
-  },
-  "năng lượng tái tạo": {
-    "patterns": ["năng lượng tái tạo", "năng lượng mặt trời", "điện gió"],
-    "responses": ["Năng lượng tái tạo là nguồn năng lượng không cạn kiệt như mặt trời, gió, thủy điện."]
-  },
-  "sao hoả": {
-    "patterns": ["sao hoả", "hành tinh đỏ", "mars"],
-    "responses": ["Sao Hỏa là hành tinh thứ 4 từ Mặt Trời, có thể từng có nước và sự sống."]
-  },
-  "kỹ năng giao tiếp": {
-    "patterns": ["giao tiếp tốt", "cách giao tiếp", "kỹ năng nói chuyện"],
-    "responses": ["Giao tiếp tốt giúp tạo thiện cảm, thuyết phục người khác và giải quyết vấn đề hiệu quả."]
-  },
-  "từ trường trái đất": {
-    "patterns": ["từ trường là gì", "từ trường trái đất", "địa từ"],
-    "responses": ["Từ trường là vùng không gian xung quanh Trái đất có tác động đến kim la bàn và vật có từ tính."]
-  },
-  "nghệ thuật": {
-    "patterns": ["nghệ thuật", "vẽ tranh", "âm nhạc", "điêu khắc"],
-    "responses": ["Nghệ thuật là cách con người thể hiện cảm xúc, ý tưởng thông qua âm nhạc, hội họa, điêu khắc..."]
-  },
-  "robot": {
-    "patterns": ["robot", "người máy", "máy móc thông minh"],
-    "responses": ["Robot là máy móc có thể thực hiện công việc thay con người, có thể được lập trình hoặc học tự động."]
-  },
-  "ngày trái đất": {
-    "patterns": ["ngày trái đất", "earth day là ngày gì", "earth day"],
-    "responses": ["Ngày Trái Đất là ngày 22 tháng 4 hàng năm để nâng cao nhận thức về môi trường."]
-  },
-  "vật lý lượng tử": {
-    "patterns": ["vật lý lượng tử", "quantum physics", "cơ học lượng tử"],
-    "responses": ["Vật lý lượng tử là ngành nghiên cứu các hiện tượng ở quy mô nguyên tử và hạ nguyên tử."]
-  },
-  "gene di truyền": {
-    "patterns": ["gene di truyền", "di truyền học", "gen là gì"],
-    "responses": ["Gene là đơn vị cơ bản của di truyền, quy định đặc điểm của sinh vật."]
-  },
-  "lỗ đen": {
-    "patterns": ["lỗ đen", "black hole", "hố đen vũ trụ"],
-    "responses": ["Lỗ đen là một vùng trong không gian nơi lực hấp dẫn rất mạnh khiến không gì thoát ra được, kể cả ánh sáng."]
+  "địa lý": {
+    "patterns": ["địa lý", "vị trí địa lý", "địa lý thế giới"],
+    "responses": ["Địa lý nghiên cứu về vị trí, môi trường và con người trên Trái đất."]
   },
   "máy học": {
     "patterns": ["máy học", "machine learning", "tự học của máy"],
