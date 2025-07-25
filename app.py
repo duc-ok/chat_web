@@ -17,13 +17,11 @@ kienthuc = load_kienthuc()
 
 def tim_y_dinh(cau_hoi):
     cau_hoi = chuan_hoa(cau_hoi)
-    all_patterns = {}
     for y_dinh, noi_dung in kienthuc.items():
         for pattern in noi_dung["patterns"]:
-            all_patterns[chuan_hoa(pattern)] = y_dinh
-    matched = get_close_matches(cau_hoi, all_patterns.keys(), n=1, cutoff=1.0)  # khớp tuyệt đối
-    return all_patterns[matched[0]] if matched else None
-
+            if cau_hoi == chuan_hoa(pattern):
+                return y_dinh
+    return None
 def tra_loi(cau_hoi):
     try:
         # Dịch sang tiếng Việt trước
