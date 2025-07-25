@@ -2,72 +2,99 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>trợ lí ảo của đức</title>
+    <title>Chatbot Python</title>
     <style>
-        body { font-family: Arial; padding: 20px; }
-        input, button { padding: 10px; margin: 5px; }
-        #chatbox { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; background: #f9f9f9; }
-        .user { color: blue; }
-        .bot { color: green; }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #chatbox {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: scroll;
+            margin-bottom: 20px;
+        }
+        #chatbox p {
+            margin: 5px 0;
+        }
+        input, textarea, button {
+            margin: 5px 0;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
-    <h2>🤖 Chatbot Python</h2>
-    <div id="chatbox"></div>
-    <input id="user_input" type="text" placeholder="Nhập câu hỏi..." />
-    <button onclick="send()">Gửi</button>
 
-    <hr>
+<h1>💬 Chat với Python Bot</h1>
 
-    <h3>🧠 Dạy Chatbot Kiến Thức Mới</h3>
-    <input id="tu_khoa" placeholder="Từ khóa chính" />
-    <input id="pattern" placeholder="Ví dụ câu hỏi" />
-    <input id="response" placeholder="Câu trả lời" />
-    <button onclick="teach()">Dạy</button>
+<div id="chatbox"></div>
 
-    <script>
-        function appendToChat(role, text) {
-            const box = document.getElementById("chatbox");
-            const msg = document.createElement("div");
-            msg.className = role;
-            msg.textContent = (role === "user" ? "Bạn: " : "Bot: ") + text;
-            box.appendChild(msg);
-            box.scrollTop = box.scrollHeight;
-        }
+<input type="text" id="question" placeholder="Nhập câu hỏi của bạn" style="width: 60%;">
+<button onclick="guiCauHoi()">Gửi</button>
 
-        function send() {
-            const input = document.getElementById("user_input");
-            const text = input.value;
-            if (!text) return;
-            appendToChat("user", text);
-            fetch("/hoi", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ cau_hoi: text })
-            })
-            .then(res => res.json())
-            .then(data => appendToChat("bot", data.tra_loi));
-            input.value = "";
-        }
+<hr>
 
-        function teach() {
-            const tu_khoa = document.getElementById("tu_khoa").value;
-            const pattern = document.getElementById("pattern").value;
-            const response = document.getElementById("response").value;
+<h2>🧠 Thêm kiến thức mới</h2>
+<input type="text" id="y_dinh" placeholder="Ý định (vd: thời tiết)">
+<br>
+<textarea id="patterns" placeholder="Mẫu câu (mỗi mẫu 1 dòng)" rows="4" cols="50"></textarea>
+<br>
+<textarea id="responses" placeholder="Câu trả lời (mỗi câu 1 dòng)" rows="4" cols="50"></textarea>
+<br>
+<button onclick="themKienThuc()">Thêm kiến thức</button>
 
-            if (!tu_khoa || !pattern || !response) {
-                alert("⚠️ Vui lòng điền đầy đủ thông tin.");
-                return;
-            }
+<p id="status"></p>
 
-            fetch("/them", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ tu_khoa, pattern, response })
-            })
-            .then(res => res.json())
-            .then(data => alert(data.message));
-        }
-    </script>
+<script>
+function themKienThuc() {
+    const y_dinh = document.getElementById("y_dinh").value.trim();
+    const patterns = document.getElementById("patterns").value.trim().split("\n");
+    const responses = document.getElementById("responses").value.trim().split("\n");
+
+    if (!y_dinh || patterns.length === 0 || responses.length === 0) {
+        alert("Vui lòng nhập đầy đủ thông tin.");
+        return;
+    }
+
+    fetch("/them_kienthuc", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            y_dinh: y_dinh,
+            patterns: patterns,
+            responses: responses
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("status").innerText = data.message;
+    })
+    .catch(err => {
+        document.getElementById("status").innerText = "❌ Lỗi khi thêm kiến thức.";
+    });
+}
+
+function guiCauHoi() {
+    const cauHoi = document.getElementById("question").value;
+    if (!cauHoi.trim()) return;
+
+    fetch("/hoi", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ cau_hoi: cauHoi })
+    })
+    .then(res => res.json())
+    .then(data => {
+        const chatbox = document.getElementById("chatbox");
+        chatbox.innerHTML += `<p><strong>Bạn:</strong> ${cauHoi}</p>`;
+        chatbox.innerHTML += `<p><strong>Bot:</strong> ${data.tra_loi}</p>`;
+        chatbox.scrollTop = chatbox.scrollHeight;
+        document.getElementById("question").value = "";
+    });
+}
+</script>
+
 </body>
 </html>

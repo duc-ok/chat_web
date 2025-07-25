@@ -1,9 +1,6 @@
-
 services:
   - type: web
-    name: chatbot-web
+    name: chat-web
     env: python
-    plan: free
-    buildCommand: ""
+    buildCommand: pip install -r requirements.txt
     startCommand: python app.py
-    autoDeploy: true
